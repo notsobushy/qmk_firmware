@@ -1,8 +1,7 @@
 # Notsobushy Planck Layout v4
 
 
-## v4 Changes:
-
+### v4 Changes:
 * Significant changes to keycodes & locations on Raise/Lower/Adjust
 	* Simplified numbers / symbols on Lower
 	* Simplified function keys, media & mouse controls on Raise
@@ -12,8 +11,7 @@
 * Corrected ASCII keymap images from v3
 
 
-## v3 Changes:
-
+### v3 Changes:
 * Added v2 changes to default Planck keymap.c
 * Removed Colemak/Dvorak/Plover layer & keycode definitions
 * Removed references to the above layers & keycodes
@@ -23,8 +21,7 @@
 * Added Adjust to bottom row on Raise/Lower
 
 
-## v2 Changes:
-
+### v2 Changes:
 * 1u space on the left
 * Raise and lower available under right thumb
 * Enter and " swapped vertically, enter now in line with JKL;
@@ -32,6 +29,5 @@
 * Created via online configurator
 
 
-## v1 Changes:
-
+### v1 Changes:
 * Default Planck rev4 keymap
