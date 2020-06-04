@@ -6,6 +6,7 @@
 	* Simplified numbers / symbols on Lower
 	* Simplified function keys, media & mouse controls on Raise
 	* Removed unused RGB / swap keys on Adjust, rearranged the remainder
+	* Re-added backlight controls
 * Swapped Raise and Lower on right side of default bottom row
 * Added momentary keycode for Adjust layer on default bottom row
 * Corrected ASCII keymap images from v3
