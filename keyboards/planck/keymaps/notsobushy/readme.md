@@ -2,6 +2,13 @@
 
 
 ### v4 Changes:
+* Removed some original Planck code
+* Got adjust layer working as a standalone keycode
+* Adjust key now functions as DEL when tapped, adjust when held
+* Readjusted the functionality for raise+lower=adjust
+
+
+### v4 Changes:
 * Significant changes to keycodes & locations on Raise/Lower/Adjust
 	* Simplified numbers / symbols on Lower
 	* Simplified function keys, media & mouse controls on Raise
