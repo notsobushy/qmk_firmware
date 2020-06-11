@@ -90,7 +90,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * |BLBrea|BLDown|BL Up |BL Off|BL On |GUI/CT|CT/GUI|      |      |      |      |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * |      |Voice-|Voice+|Mus on|Musoff|MIDIon|MIDIof|MUSmod|Audio |      |      |      |
+ * |      |Voice-|Voice+|Mus on|Musoff|      |      |MUSmod|Audio |Clicks|      |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * |      |      |      |      |      |      |      |      |      |      |      |      |
  * `-----------------------------------------------------------------------------------'
@@ -98,7 +98,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_ADJUST] = LAYOUT_planck_grid(
     _______, RESET,   DEBUG,   TERM_ON, TERM_OFF, _______, _______, DF(_QWERTY), DF(_LOWER), DF(_RAISE), DF(_ADJUST), _______,
     BL_BRTG, BL_DEC,  BL_INC,  BL_OFF,  BL_ON,    LCG_SWP, LCG_NRM, _______,     _______,    _______,    _______,     _______,
-    _______, MUV_DE,  MUV_IN,  MU_ON,   MU_OFF,   _______, _______,  MU_MOD,     AU_TOG,     _______,     _______,     _______,
+    _______, MUV_DE,  MUV_IN,  MU_ON,   MU_OFF,   _______, _______,  MU_MOD,     AU_TOG,     CK_TOGG,     _______,     _______,
     _______, _______, _______, _______, _______,  _______, _______, _______,     _______,    _______,    _______,     _______
 )
 

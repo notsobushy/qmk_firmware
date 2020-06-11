@@ -1,11 +1,18 @@
-# Notsobushy Planck Layout v4
+# Notsobushy Planck Layout v5
 
+### To Do:
+* Fix backlight breathing
+* Add clicky keys to config.h
+* Alter command to function as alt when double tapped (tap dance)
 
-### v4 Changes:
-* Removed some original Planck code
+### v5 Changes:
+* Removed some original Planck code, commented out some muse code
 * Got adjust layer working as a standalone keycode
 * Adjust key now functions as DEL when tapped, adjust when held
 * Readjusted the functionality for raise+lower=adjust
+* Enabled mousekeys in rules.mk
+* Removed MIDI controls
+* Altered audio/music mode controls
 
 
 ### v4 Changes:
