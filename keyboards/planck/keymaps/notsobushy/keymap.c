@@ -90,7 +90,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * |BLBrea|BLDown|BL Up |BL Off|BL On |GUI/CT|CT/GUI|      |      |      |      |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * |      |Voice-|Voice+|Mus on|Musoff|MIDIon|MIDIof|MUSmod|Aud on|Audoff|      |      |
+ * |      |Voice-|Voice+|Mus on|Musoff|MIDIon|MIDIof|MUSmod|Audio |      |      |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * |      |      |      |      |      |      |      |      |      |      |      |      |
  * `-----------------------------------------------------------------------------------'
@@ -98,7 +98,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_ADJUST] = LAYOUT_planck_grid(
     _______, RESET,   DEBUG,   TERM_ON, TERM_OFF, _______, _______, DF(_QWERTY), DF(_LOWER), DF(_RAISE), DF(_ADJUST), _______,
     BL_BRTG, BL_DEC,  BL_INC,  BL_OFF,  BL_ON,    LCG_SWP, LCG_NRM, _______,     _______,    _______,    _______,     _______,
-    _______, MUV_DE,  MUV_IN,  MU_ON,   MU_OFF,   MI_ON,   MI_OFF,  MU_MOD,      AU_ON,      AU_OFF,     _______,     _______,
+    _______, MUV_DE,  MUV_IN,  MU_ON,   MU_OFF,   _______, _______,  MU_MOD,     au_tog,     _______,     _______,     _______,
     _______, _______, _______, _______, _______,  _______, _______, _______,     _______,    _______,    _______,     _______
 )
 
@@ -115,38 +115,6 @@ uint8_t last_muse_note = 0;
 uint16_t muse_counter = 0;
 uint8_t muse_offset = 70;
 uint16_t muse_tempo = 50;
-
-void encoder_update(bool clockwise) {
-  if (muse_mode) {
-    if (IS_LAYER_ON(_RAISE)) {
-      if (clockwise) {
-        muse_offset++;
-      } else {
-        muse_offset--;
-      }
-    } else {
-      if (clockwise) {
-        muse_tempo+=1;
-      } else {
-        muse_tempo-=1;
-      }
-    }
-  } else {
-    if (clockwise) {
-      #ifdef MOUSEKEY_ENABLE
-        tap_code(KC_MS_WH_DOWN);
-      #else
-        tap_code(KC_PGDN);
-      #endif
-    } else {
-      #ifdef MOUSEKEY_ENABLE
-        tap_code(KC_MS_WH_UP);
-      #else
-        tap_code(KC_PGUP);
-      #endif
-    }
-  }
-}
 
 void matrix_scan_user(void) {
 #ifdef AUDIO_ENABLE
