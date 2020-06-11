@@ -31,15 +31,15 @@ enum planck_keycodes {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 /* Qwerty
- * ,-----------------------------------------------------------------------------------.
- * | Tab  |   Q  |   W  |   E  |   R  |   T  |   Y  |   U  |   I  |   O  |   P  | Bksp |
- * |------+------+------+------+------+------+------+------+------+------+------+------|
- * | Esc  |   A  |   S  |   D  |   F  |   G  |   H  |   J  |   K  |   L  |   ;  |Enter |
- * |------+------+------+------+------+------+------+------+------+------+------+------|
- * | Shift|   Z  |   X  |   C  |   V  |   B  |   N  |   M  |   ,  |   .  |   /  |  "   |
- * |------+------+------+------+------+------+------+------+------+------+------+------|
- * | Light| Ctrl | Alt  | Del  |  GUI | Space| Lower| Raise| Left | Down |  Up  |Right |
- * `-----------------------------------------------------------------------------------'
+* ,-----------------------------------------------------------------------------------.
+* | Tab  |   Q  |   W  |   E  |   R  |   T  |   Y  |   U  |   I  |   O  |   P  | Bksp |
+* |------+------+------+------+------+------+------+------+------+------+------+------|
+* | Esc  |   A  |   S  |   D  |   F  |   G  |   H  |   J  |   K  |   L  |   ;  |Enter |
+* |------+------+------+------+------+------+------+------+------+------+------+------|
+* | Shift|   Z  |   X  |   C  |   V  |   B  |   N  |   M  |   ,  |   .  |   /  |  "   |
+* |------+------+------+------+------+------+------+------+------+------+------+------|
+* | Light| Ctrl | Alt  | Del  |  GUI | Space| Lower| Raise| Left | Down |  Up  |Right |
+* `-----------------------------------------------------------------------------------'
  */
 [_QWERTY] = LAYOUT_planck_grid(
     KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSPC,
@@ -98,7 +98,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_ADJUST] = LAYOUT_planck_grid(
     _______, RESET,   DEBUG,   TERM_ON, TERM_OFF, _______, _______, DF(_QWERTY), DF(_LOWER), DF(_RAISE), DF(_ADJUST), _______,
     BL_BRTG, BL_DEC,  BL_INC,  BL_OFF,  BL_ON,    LCG_SWP, LCG_NRM, _______,     _______,    _______,    _______,     _______,
-    _______, MUV_DE,  MUV_IN,  MU_ON,   MU_OFF,   _______, _______,  MU_MOD,     au_tog,     _______,     _______,     _______,
+    _______, MUV_DE,  MUV_IN,  MU_ON,   MU_OFF,   _______, _______,  MU_MOD,     AU_TOG,     _______,     _______,     _______,
     _______, _______, _______, _______, _______,  _______, _______, _______,     _______,    _______,    _______,     _______
 )
 
@@ -108,7 +108,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 layer_state_t layer_state_set_user(layer_state_t state) {
   return update_tri_layer_state(state, _LOWER, _RAISE, _ADJUST);
 }
-*/
 
 bool muse_mode = false;
 uint8_t last_muse_note = 0;
@@ -141,8 +140,10 @@ bool music_mask_user(uint16_t keycode) {
   switch (keycode) {
     case RAISE:
     case LOWER:
+    case ADJUST:
       return false;
     default:
       return true;
   }
 }
+*/
