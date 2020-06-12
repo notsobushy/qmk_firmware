@@ -13,6 +13,7 @@
 * Enabled mousekeys in rules.mk
 * Removed MIDI controls
 * Altered audio/music mode controls
+* Added right shift to the " key when held
 
 
 ### v4 Changes:
