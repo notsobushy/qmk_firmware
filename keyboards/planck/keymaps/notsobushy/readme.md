@@ -14,6 +14,7 @@
 * Removed MIDI controls
 * Altered audio/music mode controls
 * Added right shift to the " key when held
+* Added 'one shot shift' behavior for left shift
 
 
 ### v4 Changes:
